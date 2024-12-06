@@ -1,0 +1,20 @@
+import random
+
+print("Welcome to the word guessing game.\nyou have limited chance to guess the word.\nLet's Play the the game")
+
+chances= 8
+counter =0
+
+Words= ["table","chair","paper","food","orange","great","previewtech","cotgin","option"]
+
+word=random.choice(Words)
+while counter< chances:
+    counter +=1
+    guess_word= input("Enter the word to guess from the given words list(table,chair,paper,food,orange,great,previewtech,cotgin,option):")
+    if guess_word== word:
+        print("yes,you guess the right word",word)
+    elif counter >=chances and guess_word !=word :
+        print("You guess the wrong word,better luck next time,the correct word is :", word)
+
+    elif guess_word != word:
+        print("Not correct, try again")
